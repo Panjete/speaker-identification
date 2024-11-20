@@ -1,3 +1,10 @@
+## File Structure
+
+`pipeline.ipynb` has interactive experimental test-beds for playing around with these models. You can pass in any audio file, construct a library of audion samples, or verify pairwise samples.
+
+
+Please find the detailed theoretical concepts, architectures and development history of the speaker-identification systems in `theoretical_aid.pdf`. 
+
 
 
 
