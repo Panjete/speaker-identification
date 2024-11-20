@@ -2,3 +2,4 @@
 content/*
 manual_data/proc/*
 manual_data/raw/*
+__pycache__/*

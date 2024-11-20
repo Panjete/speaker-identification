@@ -15,25 +15,24 @@
 import json
 
 import numpy as np
-import torch
+#import torch
 from lightning.pytorch import seed_everything
 from omegaconf import OmegaConf
-
 from nemo.collections.asr.data.audio_to_label import AudioToSpeechLabelDataset
 from nemo.collections.asr.models import EncDecSpeakerLabelModel
 from nemo.collections.asr.parts.features import WaveformFeaturizer
 from nemo.core.config import hydra_runner
 from nemo.utils import logging
-
 seed_everything(42)
 
+print("hello")
 
-@hydra_runner(config_path="conf", config_name="speaker_identification_infer")
-def main(cfg):
-
+#@hydra_runner(config_path="conf", config_name="speaker_identification_infer")
+def main_g(cfg_path="conf/speaker_identification_infer.yaml"):
+    cfg = OmegaConf.load(cfg_path)
     logging.info(f'Hydra config: {OmegaConf.to_yaml(cfg)}')
 
-    device = 'cuda' if torch.cuda.is_available() else 'cpu'
+    device = 'cpu'#'cuda' if torch.cuda.is_available() else 'cpu'
 
     enrollment_manifest = cfg.data.enrollment_manifest
     test_manifest = cfg.data.test_manifest
@@ -120,4 +119,4 @@ def main(cfg):
 
 
 if __name__ == '__main__':
-    main()
+    main_g()

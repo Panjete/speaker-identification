@@ -1,8 +1,8 @@
 name: &name "SpeakerIdentificationInfer"
 
 data:
-    enrollment_manifest: ???
-    test_manifest: ???
+    enrollment_manifest: './content/data/an4/wav/an4_clstk/train_all_manifest.json'
+    test_manifest: './content/data/an4/wav/an4test_clstk/test_all_manifest.json'
     out_manifest: './infer_output.json'
     sample_rate: 16000
 
