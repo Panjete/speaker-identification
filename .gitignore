@@ -1,0 +1,4 @@
+.DS_Store*
+content/*
+manual_data/proc/*
+manual_data/raw/*
